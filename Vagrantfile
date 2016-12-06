@@ -13,7 +13,7 @@ config.vm.network "public_network", ip: "192.168.33.10"
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu_precise_32"
+  config.vm.box = "hashicorp/precise32"
   config.vm.network "public_network"
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -72,6 +72,7 @@ config.vm.network "public_network", ip: "192.168.33.10"
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+
 
   config.vm.provision :shell, path: "ciaa_environment_setup.sh", privileged: true
   config.vm.provision :shell, path: "ciaa_ide_setup.sh", privileged: true
